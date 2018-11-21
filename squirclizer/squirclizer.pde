@@ -2,19 +2,16 @@ PGraphics pg;
 PImage icon;
 color clear;
 
-// 1. provide the width and height of your icon in pixels
-int w = 1024;
-int h = 1024;
+// 1. put the icon you want to squirclize the working directory
 
-// 2. put the icon you want to squirclize the working directory
-
-// 3. provide the name of the icon you want to squirclize
-String inputFileName = "AutoPad1024.png";
-String outputFileName = "icon.png";
+// 2. provide the name of the icon you want to squirclize
+String inputFileName = "cool_icon.png";
+String outputFileName = "squircle_icon.png";
 
 void setup() {
-  size(w, h);
-  pg = createGraphics(w, h);
+  // 3. these numbers should match the width and height of your icon
+  size(1024, 1024);
+  pg = createGraphics(1024, 1024);
 }
 
 void draw() {
@@ -23,7 +20,7 @@ void draw() {
   clear = color(0, 0, 0, 0);
   float a = width/2;
   float b = height/2;
-  // this sets the amount of squircle-ness
+  // 4. this sets the amount of squircle-ness
   float n = 5.2;
   pg.image(icon, 0, 0);
   pg.loadPixels();
